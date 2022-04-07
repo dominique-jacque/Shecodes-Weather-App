@@ -16,6 +16,16 @@
 
   <body>
     <div class="weather-app">
+        <form id="search-form">
+            <input 
+            type="text" 
+            placeholder="Search Your City..." 
+            id="search-form-input"
+            autocomplete="off" />
+             <input
+             type = "submit"
+             value="search" />
+                  </form>
     <h1 id="city-name"> <span id = "city-name"> 
       Weather for Athens, Greece
     </span>
@@ -27,7 +37,7 @@
         <div class="card-body">
           <h5 class="card-title">Right Now...</h5>
           <p class="card-text">
-            <p> <div id ="current-temperature" class = "current-temperature"> Cloudy 52°F </div> </p>
+            <p> <div id ="current-descript"> Cloudy </div> <div id ="current-temperature" class = "current-temperature"> Cloudy 52°F </div> </p>
             <ul class = "details">
               <li> Precipitation:
                 <div id = "current-precipitation" class = "current-precipitation">
@@ -123,20 +133,10 @@
       <div class = "container">
         <div class = "row">
           <div class = "col-6">
-            <form id="search-form">
-      <input 
-      type="text" 
-      placeholder="Search Your City..." 
-      id="search-form-input"
-      autocomplete="off" />
-       <input
-       type = "submit"
-       value="search" />
-            </form>
     </div>
     </div>
   </div>
-<link href= "https://github.com/dominique-jacque/Shecodes-Weather-App" >
+<a href= "https://github.com/dominique-jacque/Shecodes-Weather-App" > Coded by Dominique Insisiengmay </a>
   <script src="src/index.js"> </script>
     </body>
 </html>
