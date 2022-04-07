@@ -36,16 +36,20 @@ function formatDate() {
   let h3 = document.querySelector("h3");
   h3.innerHTML = formatDate(Date);
   
+ 
   function displayCurrentWeather(response) {
     console.log(response.data);
     let temp = Math.round(response.data.main.temp);
     let humid = response.data.main.humidity;
+    let descript = response.data.weather[0].main;
     let wind = Math.round(response.data.wind.speed);
     let currentTemp = document.querySelector("#current-temperature");
     let currentHumid = document.querySelector("#current-humid");
+    let currentDescript = document.querySelector("#current-descript");
     let currentWind = document.querySelector("#current-wind");
     currentTemp.innerHTML = `${temp}°F`;
     currentHumid.innerHTML = `${humid}%`;
+    currentDescript.innerHTML = `${descript}`;
     currentWind.innerHTML = `${wind}mph`;
   }
   
