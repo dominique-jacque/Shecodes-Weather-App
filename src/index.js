@@ -1,3 +1,4 @@
+// Feature #1-displaying current time and date
 function formatDate() {
     let now = new Date();
     let date = now.getDate();
