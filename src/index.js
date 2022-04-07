@@ -52,15 +52,13 @@ function formatDate() {
   function searchCity(event) {
     event.preventDefault();
     let currentCity = document.querySelector("#city-name");
+    let input = document.querySelector("#search-form-input");
     currentCity.innerHTML = `Weather for ${input.value}`;
+    let apiKey = "08e97ecdda5ea0cf3c620c610617c3ee";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayCurrentWeather);
   }
-  let input = document.querySelector("#search-form-input");
-  console.log(input.value);
-  let city = input.value;
-  let apiKey = "08e97ecdda5ea0cf3c620c610617c3ee";
-  let units = "metrics";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(displayCurrentWeather);
   
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", searchCity, false);
